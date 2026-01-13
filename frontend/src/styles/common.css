@@ -1,0 +1,464 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #66eaa8 0%, #3b805e 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Контейнер для страницы входа */
+.login-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.login-header {
+    background: linear-gradient(135deg, #66eaa8 0%, #3b805e 100%);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+.login-header h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.student-info {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.student-info p {
+    margin: 5px 0;
+}
+
+/* Форма входа */
+.login-form-container {
+    padding: 30px;
+}
+
+.login-form-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #66eaa8;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #66eaa8 0%, #3b805e 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+}
+
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.login-hint {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f8ff;
+    border-radius: 6px;
+    text-align: center;
+    color: #666;
+}
+
+.clock-container {
+    text-align: center;
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+#clock {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    font-family: monospace;
+}
+
+/* Основная страница */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.main-header {
+    background: linear-gradient(135deg, #66eaa8 0%, #3b805e 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header h1 {
+    font-size: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logout-btn {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 16px;
+}
+
+.logout-btn:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+/* Основной контент */
+.main-content {
+    display: flex;
+    padding: 20px;
+    gap: 30px;
+}
+
+.left-column {
+    flex: 1;
+}
+
+.right-column {
+    flex: 1;
+}
+
+/* Секция ввода */
+.input-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.input-section h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.value-btn {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    min-width: 40px;
+}
+
+.value-btn:hover {
+    border-color: #66eaa8;
+}
+
+.check-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.check-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #45a049 0%, #3d8b40 100%);
+}
+
+.results-section {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.results-section h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.table-container {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th {
+    background: #3b805e;
+    color: white;
+    padding: 12px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    font-weight: 600;
+}
+
+.results-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 500;
+    color: #333;
+}
+
+.results-table tr:hover {
+    background: #f5f5f5;
+}
+
+.results-table .hit {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.results-table .miss {
+    color: #F44336;
+    font-weight: bold;
+}
+
+.no-data {
+    text-align: center;
+    color: #999;
+    padding: 20px !important;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c62828;
+}
+
+/* мобильная */
+@media (max-width: 655px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .main-header h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .logout-btn {
+        width: 100%;
+        padding: 20px 30px;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.25);
+        border: 3px solid white;
+        margin-top: 10px;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .logout-btn:hover {
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(1.02);
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .graph-svg {
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+        display: block;
+    }
+}
+
+/* планшетная */
+@media (min-width: 656px) and (max-width: 1223px) {
+    body {
+        padding: 20px;
+    }
+
+    .main-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 25px;
+    }
+
+    .main-header h1 {
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    .user-info {
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .logout-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        min-width: 120px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid white;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .logout-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+    }
+
+    .button-group {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .main-content {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .graph-svg {
+        width: 350px;
+        height: 350px;
+        margin: 0;
+    }
+}
+
+/* десктопная */
+@media (min-width: 1224px) {
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .main-content {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .left-column, .right-column {
+        flex: 1;
+    }
+
+    .graph-svg {
+        width: 400px;
+        height: 400px;
+    }
+
+
+    .logout-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        min-width: 120px;
+    }
+}

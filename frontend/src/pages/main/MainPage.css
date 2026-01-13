@@ -1,0 +1,9 @@
+.valid {
+    border: solid 2px #2E7D32;
+    background: #8abf8b;
+}
+
+.invalid {
+    border: solid 2px #C62828;
+    background: #d8aeae;
+}

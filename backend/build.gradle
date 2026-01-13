@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+group = 'm4shustik'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile 'jakarta.platform:jakarta.jakartaee-api:10.0.0'
+    implementation 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+
+    // PostgreSQL драйвер
+    runtimeOnly 'org.postgresql:postgresql:42.6.0'
+
+}
+
